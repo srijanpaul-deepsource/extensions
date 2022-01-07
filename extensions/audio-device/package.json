@@ -1,0 +1,51 @@
+{
+  "name": "audio-device",
+  "title": "Set Audio Device",
+  "description": "Switch the active audio device of your mac.",
+  "icon": "command-icon.png",
+  "author": "benvp",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "set-output-device",
+      "title": "Set Output Device",
+      "subtitle": "Audio Device",
+      "description": "Sets the active audio output device.",
+      "mode": "view"
+    },
+    {
+      "name": "set-input-device",
+      "title": "Set Input Device",
+      "subtitle": "Audio Device",
+      "description": "Sets the active audio input device.",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "switchAudioSourcePath",
+      "title": "SwitchAudioSource (switchaudio-osx) path",
+      "description": "Your local path to SwitchAudioSource.",
+      "type": "textfield",
+      "default": "/opt/homebrew/bin/SwitchAudioSource",
+      "required": true
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "~16.10.0",
+    "@types/react": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "react-devtools": "^4.19.2",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop"
+  }
+}
